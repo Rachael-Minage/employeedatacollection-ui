@@ -1,17 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.css'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Route,BrowserRouter, Routes}from 'react-router-dom';
+import Login from './components/Login'
+import Employees from './components/EmployeesList';
+import {CookiesProvider} from 'react-cookie'
+import Uploadcsv from './components/Uploadcsv';
+
+function Router(){
+  return(
+  <CookiesProvider>
+    <BrowserRouter>
+    <Routes>
+    <Route exact path = '/' element={<Login/>} component = {Login}/>
+    <Route exact path = '/employee' element={<Employees/> } component = {Employees}/>
+    <Route exact path = '/csv' element={<Uploadcsv/> } component = {Uploadcsv}/>
+
+    </Routes>
+
+    </BrowserRouter>
+    </CookiesProvider>
+    
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router/>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
