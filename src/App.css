@@ -3,10 +3,6 @@
 }
 
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -23,11 +19,19 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #AFD94F;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #AFD94F;
+}
+
+.App h1{
+  color:#AFD94F;
+}
+.employees h1{
+  color: #AFD94F;
+  text-align: center;
 }

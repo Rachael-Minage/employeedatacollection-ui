@@ -1,6 +1,5 @@
-
-import {useState,useEffect} from 'react'
-
+import '../App.css'
+import {useState,useEffect} from 'react';
 
 function Employees() {
   const [employee,setEmployee] = useState([])
@@ -26,7 +25,7 @@ function Employees() {
 
     
   return (
-    <div>
+    <div className='employees'>
               
         <h1>List Of Employees</h1>
 

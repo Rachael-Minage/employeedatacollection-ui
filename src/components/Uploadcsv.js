@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Papa from "papaparse";
+import '../App.css'
 
 function Uploadcsv() {
   // State to store parsed data
@@ -39,14 +40,15 @@ function Uploadcsv() {
   };
 
   return (
-    <div>
+    <div >
       {/* File Uploader */}
       <input
+      
         type="file"
         name="file"
         onChange={changeHandler}
         accept=".csv"
-        style={{ display: "block", margin: "10px auto" }}
+        style={{ display: "block", margin: "10px auto"  }}
       />
       <br />
       <br />
